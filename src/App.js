@@ -1,7 +1,8 @@
 import "./App.css";
+import Rutas from "./components/common/routes/Rutas";
 
 function App() {
-	return <div className="App"></div>;
+	return <Rutas />;
 }
 
 export default App;

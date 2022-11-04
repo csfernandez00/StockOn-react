@@ -1,0 +1,140 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Juan",
+      "lastName": "Ortiz",
+      "mail": "JuanOrtiz@gmail.com",
+      "password": "1234",
+      "corp": "Dakota S.A.",
+      "country": "Argentina",
+      "products": [
+        {
+          "id": 1,
+          "code": "AA-001",
+          "name": "Auto",
+          "model": "coupe",
+          "brand": "Peugeot",
+          "quantity": 3
+        },
+        {
+          "id": 2,
+          "code": "AA-002",
+          "name": "Camioneta",
+          "model": "coupe",
+          "brand": "Toyota",
+          "quantity": 28
+        },
+        {
+          "id": 3,
+          "code": "AA-003",
+          "name": "Auto",
+          "model": "coupe",
+          "brand": "Audi",
+          "quantity": 15
+        },
+        {
+          "id": 4,
+          "code": "AA-004",
+          "name": "Auto",
+          "model": "coupe",
+          "brand": "Nissan",
+          "quantity": 4
+        },
+        {
+          "id": 5,
+          "code": "AA-005",
+          "name": "Celular",
+          "model": "A31",
+          "brand": "Samsung",
+          "quantity": 10
+        },
+        {
+          "id": 6,
+          "code": "AA-006",
+          "name": "Camion",
+          "model": "Coupe",
+          "brand": "Ford",
+          "quantity": "200"
+        },
+        {
+          "name": "Monitor",
+          "model": "Curved 144Hz",
+          "brand": "Samsung",
+          "quantity": "4",
+          "code": "AA-008",
+          "id": 1666812711728
+        },
+        {
+          "name": "Celular",
+          "model": "Xiaomi",
+          "brand": "MI a1",
+          "quantity": "12",
+          "code": "AA-009",
+          "id": 1666815719199
+        },
+        {
+          "name": "Tablet",
+          "model": "4k",
+          "brand": "Bgh",
+          "quantity": "8",
+          "code": "AA-010",
+          "id": 1666815743832
+        },
+        {
+          "name": "Televisor",
+          "model": "Led 54\"",
+          "brand": "Philips",
+          "quantity": "3",
+          "code": "AA-011",
+          "id": 1666815771972
+        },
+        {
+          "name": "Ipad",
+          "model": "11\"",
+          "brand": "Apple",
+          "quantity": "7",
+          "code": "AA-012",
+          "id": 1666822844235
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Pedro",
+      "lastName": "Alfonso",
+      "mail": "pedritoAlfonso40@gmail.com",
+      "password": "12345",
+      "corp": "Accenture S.A",
+      "country": "Brasil",
+      "products": [
+        {
+          "id": 1,
+          "code": "AA-001",
+          "name": "Auto",
+          "model": "coupe",
+          "brand": "Peugeot",
+          "quantity": 3
+        },
+        {
+          "id": 2,
+          "code": "AA-002",
+          "name": "Camioneta",
+          "model": "coupe",
+          "brand": "Toyota",
+          "quantity": 28
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ricardo",
+      "lastName": "Alonso",
+      "mail": "RickyAlonso40@gmail.com",
+      "password": "123456",
+      "corp": "Burgert S.A",
+      "country": "Mexico",
+      "products": []
+    }
+  ]
+}
