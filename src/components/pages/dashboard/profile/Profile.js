@@ -93,11 +93,12 @@ function Profile({
 					flex: "1 1",
 					display: "flex",
 					flexDirection: "column",
+					flexWrap: "nowrap",
 					height: "100%",
 					gap: "1rem",
 				}}
 			>
-				<Grid item xs={12} md={12} style={{ flex: "1 1" }}>
+				<Grid item xs={12} style={{ flex: "1 1" }}>
 					<Paper
 						style={{
 							display: " flex",
@@ -116,25 +117,27 @@ function Profile({
 						/>
 					</Paper>
 				</Grid>
+
 				<Box
 					component="div"
 					style={{
 						flex: "1 1",
 						display: "flex",
 						flexDirection: "row",
+						flexWrap: "nowrap",
 						gap: "1rem",
 						padding: " 0 1rem",
 						width: "98%",
 					}}
 				>
-					<Grid item xs={6} md={6}>
+					<Grid item xs={6}>
 						<Paper style={paperStyle} elevation={4}>
 							<div style={cardStyle}>
 								<CreatorCard />
 							</div>
 						</Paper>
 					</Grid>
-					<Grid item xs={6} md={6}>
+					<Grid item xs={6}>
 						<Paper style={paperStyle} elevation={4}>
 							<div style={cardStyle}>
 								<DeleteAccountCard

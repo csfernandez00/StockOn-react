@@ -8,7 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background-color: #e1e1e1;
-  
+  min-width: 1550px;
 }
 
 code {

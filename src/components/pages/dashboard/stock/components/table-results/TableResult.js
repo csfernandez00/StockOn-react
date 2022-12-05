@@ -1,5 +1,4 @@
 import {
-	IconButton,
 	Table,
 	TableBody,
 	TableCell,
@@ -7,11 +6,10 @@ import {
 	TableHead,
 	TableRow,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import DataRow from "./row/DataRow";
 import NoData from "./no-data/NoData";
-import { ArrowUpward } from "@mui/icons-material";
 
 function TableResult({
 	data,
@@ -35,22 +33,20 @@ function TableResult({
 				};
 			case "Código":
 				return {
-					width: "6%",
+					width: "4%",
 					padding: "1rem 1rem ",
 					backgroundColor: "#f7f7f7",
 					fontWeight: "bold",
 				};
 			default:
 				return {
-					width: "10%",
+					width: "5%",
 					padding: "1rem 1rem ",
 					backgroundColor: "#f7f7f7",
 					fontWeight: "bold",
 				};
 		}
 	};
-
-	useEffect(() => {}, []);
 
 	return (
 		<TableContainer style={{ border: "1px solid #eee" }}>

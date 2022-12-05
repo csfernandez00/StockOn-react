@@ -34,14 +34,6 @@
           "quantity": 15
         },
         {
-          "id": 4,
-          "code": "AA-004",
-          "name": "Auto",
-          "model": "coupe",
-          "brand": "Nissan",
-          "quantity": 4
-        },
-        {
           "id": 5,
           "code": "AA-005",
           "name": "Celular",
@@ -88,14 +80,6 @@
           "quantity": "3",
           "code": "AA-011",
           "id": 1666815771972
-        },
-        {
-          "name": "Ipad",
-          "model": "11\"",
-          "brand": "Apple",
-          "quantity": "7",
-          "code": "AA-012",
-          "id": 1666822844235
         }
       ]
     },
