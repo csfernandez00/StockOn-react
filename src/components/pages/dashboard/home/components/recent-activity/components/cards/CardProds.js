@@ -4,8 +4,9 @@ import { Col, Row } from "../../../../styles";
 import { HiOutlineInboxArrowDown } from "react-icons/hi2";
 import COLORS from "../../../../../../../common/theme/colors";
 
-export default function CardProds() {
+export default function CardProds({ productsData }) {
 	const iconStyle = { flex: "1 1", fontSize: "4.5rem", color: "#ddd" };
+
 	return (
 		<Paper
 			style={{ padding: ".5rem", height: "76%", borderRadius: ".6rem" }}
@@ -73,7 +74,7 @@ export default function CardProds() {
 									color: "transparent",
 								}}
 							>
-								5
+								{productsData?.length}
 							</span>
 							<p style={{ margin: "0rem", color: `${COLORS.black}` }}>
 								Productos Totales

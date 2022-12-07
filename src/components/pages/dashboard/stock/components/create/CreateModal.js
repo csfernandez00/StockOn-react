@@ -40,6 +40,7 @@ function CreateModal({
 	const handleCreate = async () => {
 		setLoading(true);
 		form.id = Date.now();
+		form.quantity = parseInt(form.quantity);
 		await createProduct(form)
 			.then((res) => {
 				setSuccessToast(true);

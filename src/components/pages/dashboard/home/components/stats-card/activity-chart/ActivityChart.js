@@ -1,5 +1,6 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
+import COLORS from "../../../../../../common/theme/colors";
 
 export default function ActivityChart() {
 	const data = {
@@ -8,11 +9,7 @@ export default function ActivityChart() {
 			{
 				label: "My First Dataset",
 				data: [14, 8, 10],
-				backgroundColor: [
-					"rgb(255, 99, 132)",
-					"rgb(54, 162, 235)",
-					"rgb(255, 205, 86)",
-				],
+				backgroundColor: [COLORS.purple, COLORS.pink, COLORS.yellow],
 				hoverOffset: 4,
 			},
 		],

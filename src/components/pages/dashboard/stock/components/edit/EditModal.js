@@ -40,6 +40,7 @@ function EditModal({
 	const handleEdit = async () => {
 		setLoading(true);
 		form.id = productSelected.id;
+		form.quantity = parseInt(form.quantity);
 		await editProduct(form)
 			.then((res) => {
 				setSuccessToast(true);

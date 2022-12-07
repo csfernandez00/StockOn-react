@@ -1,11 +1,27 @@
 import { Paper } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row } from "../../../../styles";
 import { FiLayers } from "react-icons/fi";
 import COLORS from "../../../../../../../common/theme/colors";
 
-export default function CardUnits() {
+export default function CardUnits({ lastProds, productsData }) {
+	const [recentUnits, setRecentUnits] = useState();
+	const [totalUnits, setTotalUnits] = useState();
 	const iconStyle = { flex: "1 1", fontSize: "4.5rem", color: "#ddd" };
+
+	useEffect(() => {
+		let acc = 0;
+		lastProds?.forEach((product) => {
+			acc += product.quantity;
+		});
+		setRecentUnits(acc);
+		let accTotal = 0;
+		productsData?.forEach((product) => {
+			accTotal += product.quantity;
+		});
+
+		setTotalUnits(accTotal);
+	}, [lastProds, productsData]);
 	return (
 		<Paper
 			style={{ padding: ".5rem", height: "76%", borderRadius: ".6rem  " }}
@@ -29,7 +45,7 @@ export default function CardUnits() {
 								color: `${COLORS.black}`,
 							}}
 						>
-							+50
+							+{recentUnits ? recentUnits : 0}
 						</span>
 						<p
 							style={{
@@ -73,7 +89,7 @@ export default function CardUnits() {
 									color: "transparent",
 								}}
 							>
-								5430
+								+{totalUnits ? totalUnits : 0}
 							</span>
 							<p style={{ margin: "0rem", color: `${COLORS.black}` }}>
 								Unidades Totales

@@ -8,10 +8,11 @@ import { GridContainer } from "./styles";
 
 function Home({ setSectionActive }) {
 	const [lastProds, setLastProds] = useState();
+	const [productsData, setProductsData] = useState();
 
 	const getLastProducts = async () => {
 		const productsList = await getProducts();
-
+		setProductsData(productsList);
 		setLastProds(
 			productsList.slice(productsList.length - 3, productsList.length)
 		);
@@ -31,7 +32,7 @@ function Home({ setSectionActive }) {
 						style={{ height: "100%", borderRadius: ".8rem" }}
 						elevation={10}
 					>
-						<RecentActivity lastProds={lastProds} />
+						<RecentActivity lastProds={lastProds} productsData={productsData} />
 					</Paper>
 				</Grid>
 				<Grid style={{ height: "50%" }} item xs={3}>
@@ -52,7 +53,7 @@ function Home({ setSectionActive }) {
 						style={{ height: "100%", borderRadius: ".8rem" }}
 						elevation={10}
 					>
-						<StatsCard />
+						<StatsCard productsData={productsData} />
 					</Paper>
 				</Grid>
 				<Grid item xs={3}>

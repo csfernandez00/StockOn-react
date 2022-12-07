@@ -15,7 +15,7 @@
           "name": "Auto",
           "model": "coupe",
           "brand": "Peugeot",
-          "quantity": 3
+          "quantity": 30
         },
         {
           "id": 2,
@@ -47,13 +47,13 @@
           "name": "Camion",
           "model": "Coupe",
           "brand": "Ford",
-          "quantity": "200"
+          "quantity": 20
         },
         {
           "name": "Monitor",
           "model": "Curved 144Hz",
           "brand": "Samsung",
-          "quantity": "4",
+          "quantity": 4,
           "code": "AA-008",
           "id": 1666812711728
         },
@@ -61,7 +61,7 @@
           "name": "Celular",
           "model": "Xiaomi",
           "brand": "MI a1",
-          "quantity": "12",
+          "quantity": 12,
           "code": "AA-009",
           "id": 1666815719199
         },
@@ -69,7 +69,7 @@
           "name": "Tablet",
           "model": "4k",
           "brand": "Bgh",
-          "quantity": "8",
+          "quantity": 8,
           "code": "AA-010",
           "id": 1666815743832
         },
@@ -77,7 +77,7 @@
           "name": "Televisor",
           "model": "Led 54\"",
           "brand": "Philips",
-          "quantity": "3",
+          "quantity": 3,
           "code": "AA-011",
           "id": 1666815771972
         }
