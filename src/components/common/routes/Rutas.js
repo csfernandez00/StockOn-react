@@ -13,6 +13,7 @@ import Header from "../header/Header";
 import { SectionContainer } from "./styles";
 import { getUser } from "../axios-service/AxiosService";
 import Loading from "../loading/Loading";
+import LogIn from "../../pages/login/LogIn";
 
 export default function Rutas() {
 	const [userLogged, setUserLogged] = useState();
@@ -73,6 +74,7 @@ export default function Rutas() {
 						path="/dashboard/*"
 						element={<Navigate to="/dashboard/home" />}
 					/>
+					<Route path="/login*" element={<LogIn />} />
 
 					<Route path="*" element={<Navigate to="/dashboard/home" />} />
 				</Routes>
