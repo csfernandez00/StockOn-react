@@ -4,6 +4,7 @@ import { getProducts } from "../../../common/axios-service/AxiosService";
 import RecentActivity from "./components/recent-activity/RecentActivity";
 import SectionCard from "./components/section-card/SectionCard";
 import StatsCard from "./components/stats-card/StatsCard";
+import ShortcutCard from "./components/shortcut-card/ShortcutCard";
 import { GridContainer } from "./styles";
 
 function Home({ setSectionActive }) {
@@ -53,7 +54,8 @@ function Home({ setSectionActive }) {
 						style={{ height: "100%", borderRadius: ".8rem" }}
 						elevation={10}
 					>
-						<StatsCard productsData={productsData} />
+						{/* <StatsCard productsData={productsData} /> */}
+						<ShortcutCard />
 					</Paper>
 				</Grid>
 				<Grid item xs={3}>
