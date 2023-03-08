@@ -27,8 +27,8 @@ export const Col = styled.div`
 `;
 
 export const ShortcutBox = styled.div`
-	width: 33%;
-	height: 35%;
+	width: 100%;
+	height: 100%;
 	box-shadow: 0px 0px 10px #55555580, inset 50px 50px 50px #ffffff60,
 		inset -50px -50px 50px #ffffff60;
 	border-radius: 0.5rem;

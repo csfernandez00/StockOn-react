@@ -14,6 +14,8 @@ import { SectionContainer } from "./styles";
 import { getUser } from "../axios-service/AxiosService";
 import Loading from "../loading/Loading";
 import LogIn from "../../pages/login/LogIn";
+import Billing from "../../pages/dashboard/billing/Billing";
+import Clients from "../../pages/dashboard/clients/Clients";
 
 export default function Rutas() {
 	const [userLogged, setUserLogged] = useState();
@@ -52,6 +54,28 @@ export default function Rutas() {
 						path="/dashboard/stock"
 						element={
 							<Stock
+								setSectionActive={setSectionActive}
+								userLogged={userLogged}
+								updateUserInfo={updateUserInfo}
+							/>
+						}
+					/>
+					<Route
+						exact
+						path="/dashboard/billing"
+						element={
+							<Billing
+								setSectionActive={setSectionActive}
+								userLogged={userLogged}
+								updateUserInfo={updateUserInfo}
+							/>
+						}
+					/>
+					<Route
+						exact
+						path="/dashboard/clients"
+						element={
+							<Clients
 								setSectionActive={setSectionActive}
 								userLogged={userLogged}
 								updateUserInfo={updateUserInfo}

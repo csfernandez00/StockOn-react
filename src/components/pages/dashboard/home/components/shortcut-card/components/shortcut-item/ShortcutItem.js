@@ -1,22 +1,28 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import { ShortcutBox } from "../../../../styles";
 
 function ShortcutItem({ module }) {
 	return (
-		<ShortcutBox
-			style={{
-				backgroundImage: `url(${module.bg})`,
-			}}
+		<Link
+			to={module.link}
+			style={{ textDecoration: "none", width: "33%", height: "35%" }}
 		>
-			<h3
+			<ShortcutBox
 				style={{
-					textAlign: "center",
-					color: "#555",
+					backgroundImage: `url(${module.bg})`,
 				}}
 			>
-				{module.title}
-			</h3>
-		</ShortcutBox>
+				<h3
+					style={{
+						textAlign: "center",
+						color: "#666",
+					}}
+				>
+					{module.title}
+				</h3>
+			</ShortcutBox>
+		</Link>
 	);
 }
 
