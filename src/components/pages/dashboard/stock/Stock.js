@@ -26,16 +26,19 @@ function Stock({ setSectionActive, updateUserInfo }) {
 	const [failToast, setFailToast] = useState(false);
 	const [confirmOpen, setConfirmOpen] = useState(false);
 	const [searchValue, setSearchValue] = useState(null);
+	const [toastMessage, setToastMessage] = useState("");
 
 	const handleDelete = async () => {
 		await deleteProduct(productSelected)
 			.then((res) => {
 				updateProducts();
 				setProductSelected(null);
+				setToastMessage("Producto eliminado exitosamente!");
 				setSuccessToast(true);
 				updateUserInfo();
 			})
 			.catch((err) => {
+				setToastMessage("Error al eliminar el producto!");
 				setFailToast(true);
 			});
 	};
@@ -79,6 +82,7 @@ function Stock({ setSectionActive, updateUserInfo }) {
 					setSuccessToast={setSuccessToast}
 					setFailToast={setFailToast}
 					productSelected={productSelected}
+					setToastMessage={setToastMessage}
 				/>
 			) : null}
 			{createVisible ? (
@@ -88,18 +92,19 @@ function Stock({ setSectionActive, updateUserInfo }) {
 					updateProducts={updateProducts}
 					setSuccessToast={setSuccessToast}
 					setFailToast={setFailToast}
+					setToastMessage={setToastMessage}
 				/>
 			) : null}
 			{successToast ? (
 				<SuccesToast
-					mensaje="Proceso Completado Exitosamente!"
+					mensaje={toastMessage}
 					successToast={successToast}
 					handleCloseToast={handleCloseToast}
 				/>
 			) : null}
 			{failToast ? (
 				<FailToast
-					mensaje="Error! No se pudo completar el proceso."
+					mensaje={toastMessage}
 					failToast={failToast}
 					handleCloseToast={handleCloseToast}
 				/>

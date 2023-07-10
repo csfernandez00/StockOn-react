@@ -61,9 +61,7 @@ function Profile({
 			) : null}
 			{failToast ? (
 				<FailToast
-					mensaje={
-						message ? message : "Error! No se pudo completar el proceso."
-					}
+					mensaje={message ? message : "Error al actualizar los datos!."}
 					failToast={failToast}
 					handleCloseToast={handleCloseToast}
 				/>

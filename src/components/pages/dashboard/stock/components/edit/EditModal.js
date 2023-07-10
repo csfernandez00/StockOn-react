@@ -15,6 +15,7 @@ function EditModal({
 	setSuccessToast,
 	setFailToast,
 	productSelected,
+	setToastMessage,
 }) {
 	const initialForm = {
 		name: productSelected.name,
@@ -43,11 +44,13 @@ function EditModal({
 		form.quantity = parseInt(form.quantity);
 		await editProduct(form)
 			.then((res) => {
+				setToastMessage("Producto editado exitosamente!");
 				setSuccessToast(true);
 				setEditVisible(false);
 				updateProducts();
 			})
 			.catch((err) => {
+				setToastMessage("Error al editar el producto!");
 				setFailToast(true);
 			});
 	};

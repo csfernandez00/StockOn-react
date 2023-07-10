@@ -21,6 +21,7 @@ function CreateModal({
 	updateProducts,
 	setSuccessToast,
 	setFailToast,
+	setToastMessage,
 }) {
 	const [isDisabled, setIsDisabled] = useState(true);
 	const [loading, setLoading] = useState(false);
@@ -43,12 +44,14 @@ function CreateModal({
 		form.quantity = parseInt(form.quantity);
 		await createProduct(form)
 			.then((res) => {
+				setToastMessage("Producto creado exitosamente!");
 				setSuccessToast(true);
 				setCreateVisible(false);
 				updateProducts();
 				setLoading(false);
 			})
 			.catch((err) => {
+				setToastMessage("Error al crear el producto!");
 				setFailToast(true);
 				setLoading(false);
 			});
